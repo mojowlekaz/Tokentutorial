@@ -7,15 +7,11 @@
 const hre = require("hardhat");
 
 async function main() {
-
-
   const lock = await hre.ethers.deployContract("ERC20");
 
   await lock.waitForDeployment();
 
-  console.log(
-    `ERC20 Address ${lock.target}`
-  );
+  console.log(`ERC20 Address ${lock.target}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
